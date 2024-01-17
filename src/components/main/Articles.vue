@@ -1,49 +1,63 @@
 <script>
+import BuyAvada from './BuyAvada.vue'
 export default {
-  name: 'BuyAvada'
+  name: 'Articles',
+  components: {
+    BuyAvada,
+  }
 }
 </script>
-<template lang="">
-    <div class="bg_img py-5 my-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-8">
-                    <div class="text-center">
-                        <h2>
-                            “I’ve failed over and over again in my life. And that is why I succeed.”
-                        </h2>
+<template>
+  <div class="container my-3">
+    <div class="row">
+      <div class="col-6">
+        <h4 class="my-4">
+          Latest articles
+        </h4>
+      </div>
+      <div class="col-6 text-end">
+        <h6 class="my-4">Read all articles</h6>
+        <i class="fas fa-angle-right"></i>
+      </div>
+      <div class="col-4">
+        <img class="img-fluid"
+          src="https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/blog4@2x-600x386.jpg" alt="protein">
+        <h4 class="my-3">The best protein shake</h4>
+        <div>Published On: November 26th, 2019
+          |
+          <div> 2 Comments </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <img class="img-fluid"
+          src="https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/blog1@2x-600x386.jpg" alt="cardio">
+        <h4 class="my-3">Ultimate cardio workout</h4>
+        <div>Published On: November 26th, 2019
+          |
+          <div> 0 Comments </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <img class="img-fluid"
+          src="https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/blog3@2x-600x386.jpg" alt="juices">
+        <h4 class="my-3">New juices available now</h4>
+        <div>Published On: November 26th, 2019
+          |
+          <div>0 Comments</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                        <div class="text-grey my-5">
-                            Arcu auctor gravida nisl, congue sit nisi tincidunt eget proin. In lacinia lacus donec sed massa in ipsum eros, tristique. Gravida suspendisse etiam in iaculis
-                        </div>
-                        <button>Buy Avada today <i class="fas fa-angle-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <BuyAvada />
 </template>
+
 <style lang="scss" scoped>
 @use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
 
-.bg_img {
-  background-image: url('https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/banner2@2x.jpg');
-  background-position: top;
-
-  h2 {
-    font-size: 60px;
-    color: white;
-    line-height: 1.2;
-  }
-
-  .text-grey {
-    color: $grey;
-    font-size: 25px;
-  }
-
-  button {
-    @include blue-button
+.col-4 {
+  div {
+    color: $grey
   }
 }
 </style>
