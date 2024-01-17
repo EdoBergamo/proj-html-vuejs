@@ -54,6 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../../styles/partials/variables' as *;
+@use '../../../node_modules/';
 
 .col-4 {
   div {
