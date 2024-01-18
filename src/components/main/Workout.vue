@@ -50,7 +50,7 @@ export default {
         <div class="row">
           <div class="content-col">
             <div class="col-12">
-              <i class="fa-solid fa-play"  style="color: #4154FF;"></i>
+              <i class="fa-solid fa-play"  ></i>
             </div>
             <div class="col-12">
               <h1>Crossfit workout of the day</h1>
@@ -93,6 +93,10 @@ export default {
     padding: 50px;
 
   }
+
+  .col-3 {
+    cursor: pointer;
+  }
 }
 
 .jumbo {
@@ -130,6 +134,12 @@ export default {
     border-radius: 50%;
     background-color: white;
     padding: 30px;
+    color: #4154FF;
+
+    &:hover {
+      color: $red;
+    }
+
   }
 
 }
