@@ -1,7 +1,14 @@
 <script>
+import { ref } from "vue";
+import FitnessCard from "../main/FitnessCard.vue";
 export default {
-  name: 'Partners'
-}
+  components: {
+    FitnessCard
+  },
+  name: "Partners",
+  
+};
+
 </script>
 <template lang="">
   <div class="bg-img">
@@ -14,10 +21,17 @@ export default {
             <input type="email" name="email" id="email" value="" required="true"  placeholder="Insert your email ...*" class="form-control email">
           </div>
           <div class="col-4">
-            <button type="submit" class="button">Subscribe</button>
+            <button type="submit" class="button text-white">Subscribe</button>
           </div>
         </div>
         <p class="paragraph pt-4">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet, consectetur adipiscing elit sed porttitor lectus.</p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-black">
+    <div class="container">
+      <div class="row ">
+        <FitnessCard />
       </div>
     </div>
   </div>
@@ -59,12 +73,16 @@ export default {
     .email {
       padding: 15px 60px;
       border-radius: 40px;
-      border: 1px solid black;
+      border: none;
       font-size: 18px;
     }
 
     .button {
-      @include blue-button;
+      background-color: rgb(65, 84, 255);
+      padding: 15px 60px;
+      border-radius: 40px;
+      border: none;
+      font-size: 18px;
       padding: 17px 60px;
     }
 
@@ -75,5 +93,11 @@ export default {
   }
 
 
+}
+
+.bg-black{
+  background-color: #000;
+  padding: 60px 80px;
+  
 }
 </style>
