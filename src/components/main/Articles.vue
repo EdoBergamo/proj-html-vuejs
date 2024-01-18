@@ -54,7 +54,6 @@ export default {
 
 <style lang="scss" scoped>
 @use '../../styles/partials/variables' as *;
-@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 .col-4 {
   div {
