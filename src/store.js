@@ -8,6 +8,7 @@ export const store = reactive({
       href: '/',
       active: true,
       dropdown: [],
+      badge: false
     },
     {
       id: 2,
@@ -15,7 +16,7 @@ export const store = reactive({
       href: '/',
       active: false,
       dropdown: ['All services', 'Service Single Page'],
-
+      badge: false,
     },
     {
       id: 3,
@@ -23,7 +24,7 @@ export const store = reactive({
       href: '/',
       active: false,
       dropdown: ['About me', 'Our sponsor', 'Contact'],
-
+      badge: false,
     },
     {
       id: 1,
@@ -31,7 +32,7 @@ export const store = reactive({
       href: '/',
       active: false,
       dropdown: ['All Playlist', 'Playlist Page', 'Video Single Page'],
-
+      badge: false,
     },
     {
       id: 1,
@@ -39,7 +40,7 @@ export const store = reactive({
       href: '/',
       active: false,
       dropdown: false,
-
+      badge: false,
     },
     {
       id: 1,
@@ -47,7 +48,7 @@ export const store = reactive({
       href: '/',
       active: false,
       dropdown: ['Simple Product', 'Variable Product'],
-
+      badge: true,
     },
   ],
 
