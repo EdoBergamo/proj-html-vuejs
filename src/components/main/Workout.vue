@@ -77,7 +77,7 @@ export default {
 .bg-white {
   background-color: white;
   text-align: center;
-  height: 500px;
+  height: 450px;
 
   .img {
     width: 60%;
