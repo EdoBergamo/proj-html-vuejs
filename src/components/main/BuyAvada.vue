@@ -5,6 +5,7 @@ export default {
 </script>
 <template lang="">
     <div class="bg_img">
+        <!-- SFONDO NERO SFUMATO  -->
         <div class="layout">
             <div class="container">
                 <div class="row justify-content-center">
@@ -13,7 +14,7 @@ export default {
                             <h2>
                             “I’ve failed over and over again in my life. And that is why I succeed.”
                             </h2>
-    
+                            <!-- <img src="/leila-waves-yellow.png" alt="wave"> -->
                             <div class="text-grey my-5">
                             Arcu auctor gravida nisl, congue sit nisi tincidunt eget proin. In lacinia lacus donec sed massa in ipsum eros, tristique. Gravida suspendisse etiam in iaculis
                             </div>
@@ -53,6 +54,11 @@ export default {
         button {
             @include blue-button;
             background-color: $blue;
+            font-weight: 500;
+        }
+
+        button:hover {
+            background-color: $red;
         }
     }
 

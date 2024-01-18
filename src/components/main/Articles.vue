@@ -17,17 +17,21 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col-6">
+          <!-- TITOLO SEZIONE  -->
           <h4 class="my-4">
             {{ title }}
           </h4>
         </div>
         <div class="col-6 text-end mt-4 pe-5">
           <a href="#">
+            <!-- LINK PER ALTRI ARTICOLI  -->
             <h6 class="d-inline pe-3 font-weight-bold">{{ view_all }}</h6>
             <i class="fas fa-angle-right"></i>
           </a>
         </div>
-        <div class="col-4" v-for="card in    cards   ">
+        <!-- CICLA CARD IN ARRAY PASSATO CON PROPS  -->
+        <div class="col-4" v-for="card in cards">
+          <!-- IMMAGINE  -->
           <img class="img-fluid" :src=card.img alt="protein">
           <h4 class="my-3">{{ card.name }}</h4>
           <div>
@@ -47,11 +51,25 @@ export default {
 
 .my_50 {
   margin: 60px 0;
-}
 
-.col-4 {
-  div {
-    color: $grey
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    color: $blue;
+  }
+
+  .col-4 {
+    img {
+      cursor: pointer;
+    }
+
+    div {
+      color: $grey
+    }
   }
 }
 </style>
