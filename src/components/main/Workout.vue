@@ -77,7 +77,7 @@ export default {
 .bg-white {
   background-color: white;
   text-align: center;
-  height: 500px;
+  height: 450px;
 
   .img {
     width: 60%;
@@ -104,7 +104,7 @@ export default {
 
   .layout {
     height: 650px;
-    background: linear-gradient(151deg, rgba(19, 0, 161, 0.541) 35%, rgba(156, 1, 1, 0.596) 100%);
+    background: linear-gradient(151deg, rgba(19, 0, 161, 0.726) 35%, rgba(156, 1, 1, 0.596) 100%);
   }
 
 
