@@ -29,7 +29,11 @@ export default {
 
 .bg-img {
   background-size: cover;
-  background-image: linear-gradient(90deg, black 47%, rgba(6, 6, 7, 0) 76%), url('../../../public/banner1-2x.jpg');
+  background-image: linear-gradient(90deg, black 47%, rgba(6, 6, 7, 0) 76%), url('/banner1-2x.jpg');
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .container {
     width: 80%;
