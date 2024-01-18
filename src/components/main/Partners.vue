@@ -7,7 +7,6 @@ export default {
   <div class="container">
     <h4>Join our mailing list today</h4>
     <h1>Insider offers & flash sales in your inbox every week</h1>
-  
     <div class="row pt-5">
       <div class="col-6">
         <input type="email" name="email" id="email" value="" required="true"  placeholder="Insert your email ...*" class="email">
