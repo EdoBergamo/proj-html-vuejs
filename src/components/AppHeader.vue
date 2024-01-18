@@ -34,8 +34,6 @@ export default {
                   <a href="#" v-for="drop in link.dropdown">{{ drop }}</a>
                 </div>
               </div>
-
-
             </li>
           </ul>
 
