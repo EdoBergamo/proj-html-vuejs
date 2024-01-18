@@ -22,8 +22,10 @@ export default {
           </h4>
         </div>
         <div class="col-6 text-end mt-4 pe-5">
-          <h6 class="d-inline pe-3 font-weight-bold">{{ view_all }}</h6>
-          <i class="fas fa-angle-right"></i>
+          <a href="#">
+            <h6 class="d-inline pe-3 font-weight-bold">{{ view_all }}</h6>
+            <i class="fas fa-angle-right"></i>
+          </a>
         </div>
         <div class="col-4" v-for="card in    cards   ">
           <img class="img-fluid" :src=card.img alt="protein">
