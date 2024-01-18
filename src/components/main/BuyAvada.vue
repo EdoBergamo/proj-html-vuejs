@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template lang="">
- <div class="bg_img py-5 my-5">
+<div class="bg_img py-5 my-5">
   <div class="container">
    <div class="row justify-content-center">
     <div class="col-8">
