@@ -19,7 +19,8 @@ export default {
         <!-- logo link -->
         <div class="w_auto">
           <a href="">
-            <img src="https://avada.website/fitness/wp-content/uploads/sites/130/2021/04/logo-svg.svg" alt="">
+            <img src="https://avada.website/fitness/wp-content/uploads/sites/130/2021/04/logo-svg.svg"
+              alt="logo avada fitness">
           </a>
         </div>
 
@@ -63,7 +64,7 @@ export default {
 @use '../styles/partials/mixins' as*;
 
 header {
-  background-color: black;
+  background-color: $black;
   height: 100px;
 
   ul {
@@ -89,7 +90,7 @@ header {
       display: inline-block;
 
       .custom_badge {
-        color: rgb(0, 0, 0);
+        color: $black;
         border-radius: 0;
       }
     }
@@ -97,7 +98,7 @@ header {
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #000000;
+      background-color: $black;
       min-width: 130px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
@@ -112,7 +113,7 @@ header {
     }
 
     .dropdown-content a:hover {
-      background-color: #1e00ff;
+      background-color: $blue;
     }
 
     .dropdown:hover .dropdown-content {
@@ -120,7 +121,7 @@ header {
     }
 
     i {
-      color: #7f7f7f;
+      color: $grey;
     }
   }
 
@@ -128,15 +129,15 @@ header {
     @include blue-button;
     font-weight: normal;
     font-size: medium;
-    background-color: rgb(99, 99, 235);
+    background-color: $blue;
 
     &:hover {
-      background-color: rgb(153, 0, 0);
+      background-color: $red;
     }
   }
 
   .icon_grey {
-    color: rgb(132, 132, 132);
+    color: $grey;
 
     &:hover {
       color: rgb(255, 255, 255);
