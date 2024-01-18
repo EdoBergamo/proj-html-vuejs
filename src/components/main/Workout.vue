@@ -9,35 +9,35 @@ export default {
       <div class="row">
         <div class="content-row">
           <div class="col-3">
-            <img src="/yoga.png" alt="">
+            <img class="img" src="/yoga.png" alt="">
             <div class="py-3">
               <img src="/onda.png" alt="">
             </div>
-            <p class="text-grey">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor laborum porro enim deleniti corrupti velit, non, eum quis aliquam accusantium possimus sunt, vero accusamus ea illo? Neque, iure possimus!</p>
+            <p class="text-grey">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor laborum porro enim deleniti corrupti velit, non.</p>
             <p>Visit Yoga Studio ></p>
           </div>
           <div class="col-3">
-            <img src="/fitnessCenter.png" alt="">
+            <img class="img" src="/fitnessCenter.png" alt="">
             <div class="py-3">
               <img src="/onda.png" alt="">
             </div>
-            <p class="text-grey">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor laborum porro enim deleniti corrupti velit, non, eum quis aliquam accusantium possimus sunt, vero accusamus ea illo? Neque, iure possimus!</p>
+            <p class="text-grey">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor laborum porro enim deleniti corrupti velit, non.</p>
             <p>Join Fitness Center ></p>
           </div>
           <div class="col-3">
-            <img src="/fitnessClub.png" alt="">
+            <img class="img" src="/fitnessClub.png" alt="">
             <div class="py-3">
               <img src="/onda.png" alt="">
             </div>
-            <p class="text-grey">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor laborum porro enim deleniti corrupti velit, non, eum quis aliquam accusantium possimus sunt, vero accusamus ea illo? Neque, iure possimus!</p>
+            <p class="text-grey">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor laborum porro enim deleniti corrupti velit, non.</p>
             <p>Learn about FC ></p>
           </div>
           <div class="col-3">
-            <img src="/power.png" alt="">
+            <img class="img" src="/power.png" alt="">
             <div class="py-3">
               <img src="/onda.png" alt="">
             </div>
-            <p class="text-grey">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor laborum porro enim deleniti corrupti velit, non, eum quis aliquam accusantium possimus sunt, vero accusamus ea illo? Neque, iure possimus!</p>
+            <p class="text-grey">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor laborum porro enim deleniti corrupti velit, non.</p>
             <p>Visit Power Gym ></p>
           </div>
         </div>
@@ -52,10 +52,10 @@ export default {
             <i class="fa-solid fa-play"  style="color: #4154FF;"></i>
           </div>
           <div class="col-12">
-            <h2>Crossfit workout of the day</h2>
+            <h1>Crossfit workout of the day</h1>
           </div>
           <div class="co-12">
-            <h3>November 15th, 2019</h3>
+            <h2>November 15th, 2019</h2>
           </div>
           <div class="col-12">
             <p>View all video &RightArrow;</p>
@@ -68,12 +68,20 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
 .bg-white {
   background-color: white;
   text-align: center;
+  height: 500px;
+
+  .img {
+    width: 60%;
+  }
 
   .text-grey {
-    color: grey;
+    color: $grey;
   }
 
   .content-row {
@@ -85,11 +93,13 @@ export default {
 }
 
 .jumbo {
+
   background-image: url("https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/banner14@2x.jpg");
+  //background: linear-gradient(151deg, blue 35%, red 100%);
   background-size: cover;
   color: white;
   text-align: center;
-  height: 650px;
+
 
 
 
@@ -101,8 +111,14 @@ export default {
 
   }
 
-  h3 {
-    color: yellow;
+  h1 {
+    font-size: 40px;
+    word-spacing: 2px;
+  }
+
+  h2 {
+    color: $yellow;
+    font-size: 40px;
   }
 
   i {
