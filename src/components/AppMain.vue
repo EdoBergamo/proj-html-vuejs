@@ -3,8 +3,14 @@ import Jumbotron from "./main/Jumbotron.vue";
 import Partners from "./main/Partners.vue";
 import Articles from "./main/Articles.vue";
 import Workout from "./main/Workout.vue";
+import { store } from "../store"
 
 export default {
+  data() {
+    return {
+      store
+    }
+  },
   components: {
     Jumbotron,
     Partners,
@@ -17,7 +23,7 @@ export default {
 <template>
   <Jumbotron />
   <Partners />
-  <Articles />
+  <Articles :cards="store.articles" :title="store.title_articles" :view_all="store.view_all_articles" />
   <Workout />
 </template>
 
