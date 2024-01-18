@@ -26,6 +26,7 @@ export default {
 <style lang="scss" scoped>
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 .bg_img {
     background-image: url('https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/banner2@2x.jpg');
@@ -34,12 +35,12 @@ export default {
     h2 {
         font-size: 60px;
         color: white;
-        line-height: 1.2;
     }
 
     .text-grey {
         color: $grey;
         font-size: 25px;
+        line-height: 1.5;
     }
 
     button {

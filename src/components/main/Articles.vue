@@ -41,7 +41,7 @@ export default {
         <img class="img-fluid"
           src="https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/blog3@2x-600x386.jpg" alt="juices">
         <h4 class="my-3">New juices available now</h4>
-        <div>Published On: November 26th, 2019
+        <div class="mb-5">Published On: November 26th, 2019
           |
           <div>0 Comments</div>
         </div>
@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../../styles/partials/variables' as *;
-@use '../../../node_modules/';
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 .col-4 {
   div {
