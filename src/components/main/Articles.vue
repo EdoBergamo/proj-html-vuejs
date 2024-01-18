@@ -15,8 +15,8 @@ export default {
           Latest articles
         </h4>
       </div>
-      <div class="col-6 text-end">
-        <h6 class="my-4">Read all articles</h6>
+      <div class="col-6 text-end mt-4">
+        <h6 class="d-inline pe-3">Read all articles</h6>
         <i class="fas fa-angle-right"></i>
       </div>
       <div class="col-4">
