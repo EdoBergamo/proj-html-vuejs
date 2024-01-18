@@ -47,11 +47,25 @@ export default {
 
 .my_50 {
   margin: 60px 0;
-}
 
-.col-4 {
-  div {
-    color: $grey
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    color: $blue;
+  }
+
+  .col-4 {
+    img {
+      cursor: pointer;
+    }
+
+    div {
+      color: $grey
+    }
   }
 }
 </style>

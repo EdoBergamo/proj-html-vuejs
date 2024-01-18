@@ -53,6 +53,11 @@ export default {
         button {
             @include blue-button;
             background-color: $blue;
+            font-weight: 500;
+        }
+
+        button:hover {
+            background-color: $red;
         }
     }
 
