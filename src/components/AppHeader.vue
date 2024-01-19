@@ -99,6 +99,15 @@ header {
       justify-content: space-between;
       align-items: center;
 
+      i {
+        color: $grey;
+        transition-property: color;
+        transition-duration: 1s;
+
+        &:hover {
+          color: white;
+        }
+      }
 
       ul {
         list-style-type: none;
@@ -106,9 +115,6 @@ header {
         display: flex;
         align-items: center;
 
-        i {
-          color: $grey;
-        }
       }
 
       .button_ {
