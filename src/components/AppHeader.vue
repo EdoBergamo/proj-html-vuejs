@@ -75,9 +75,7 @@ export default {
             </span>
           </div>
           <i class="fa-solid fa-xmark icon_grey mx-4 fa-2xl" @click="SearchOn"></i>
-
         </div>
-
       </div>
     </div>
   </header>
