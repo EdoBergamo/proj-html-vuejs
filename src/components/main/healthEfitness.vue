@@ -14,8 +14,8 @@ export default {
   <div class="bg">
     <div class="image">
       <img src="https://avada.website/fitness/wp-content/uploads/sites/130/2019/12/service15@2x.jpg" alt="">
+      <i class="elem fa-solid fa-play"></i>
     </div>
-    <i class="elem fa-solid fa-play"></i>
     <div class="container">
       <div class="row justify-content-end">
         <div class="col-11 ">
@@ -52,9 +52,10 @@ export default {
     background-color: white;
     padding: 30px;
     color: #4154FF;
-    position: absolute;
-    bottom: -1350px;
-    left: 430px;
+    position: relative;
+    right: 25%;
+    top: 300px;
+
 
     &:hover {
       color: $red;
@@ -63,7 +64,6 @@ export default {
   }
 
   .image {
-
 
     img {
       width: 900px;
