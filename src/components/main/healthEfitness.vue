@@ -50,7 +50,7 @@ export default {
       height: 780px;
       border-bottom-right-radius: 10%;
       position: absolute;
-      top: 1450px;
+      top: 1800px;
     }
 
 
