@@ -7,6 +7,8 @@ export default {
             cards: ref([
                 {
                     id: 1,
+                    // voglio aggiungere una immagine presente nella cartella public
+                    img: "./../../public/fitness-watch.png",
                     title: "Team training",
                     subtitle: "Find a partner",
                     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -14,6 +16,7 @@ export default {
                 },
                 {
                     id: 2,
+                    img: "./../../public/dumbbell.png",
                     title: "Crossfit workout",
                     subtitle: "Push your limits",
                     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -21,6 +24,7 @@ export default {
                 },
                 {
                     id: 3,
+                    img: "./../../public/idk-waist.png",
                     title: "Weight loss plan",
                     subtitle: "Shed those pounds",
                     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -33,15 +37,18 @@ export default {
 </script>
 <template lang="">
     <div class="container">
-          <ul v-for="card in cards" :key="card.id" class="border border-primary border-4 rounded-1 list-unstyled text-center p-3 mx-3 ">
+          <ul v-for="card in cards" :key="card.id" class="border border-primary border-4 rounded-1 list-unstyled text-center mx-4 ">
             <li>
-              <div class="card-header text-white">
+                <div>
+                    <img :src="card.img" :alt="card.title">
+                </div>
+              <div class="card-header text-white mt-3">
                 <h2>{{ card.title }}</h2>
               </div>
-              <div class="card-subtitle">
+              <div class="card-subtitle mb-5">
                 <h3>{{ card.subtitle }}</h3>
               </div>
-              <div class="card-body text-white">
+              <div class="card-body text-white mb-5">
                 <p>{{ card.description }}</p>
               </div>
               <div class="card-footer">
@@ -55,19 +62,29 @@ export default {
 .container {
     display: flex;
     margin: 0px;
+
+    ul{
+        padding: 35px 40px ;
+    }
+    .card-subtitle {
+        color: #fff941;
+
+    }
+
+    .card-body p{
+        font-size: 19px;
+        line-height: 31px;
+        color: #d5d4d7;
+    }
+    .card-footer a {
+        text-decoration: none;
+    }
+
 }
 
 
 
 
-
-.card-subtitle {
-    color: #fff941;
-}
-
-.card-footer a {
-    text-decoration: none;
-}
 
 
 </style>
