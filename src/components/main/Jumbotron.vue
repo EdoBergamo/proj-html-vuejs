@@ -30,8 +30,8 @@ export default {
         <i class="fa-solid mx-2 fa-arrow-right"></i>
       </button>
     </div>
+    <i class="fa-solid fa-play play-button"></i>
   </div>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -46,6 +46,7 @@ export default {
 .hero {
   height: 650px;
   display: flex;
+  position: relative;
   width: 100%;
   align-items: center;
   background: linear-gradient(90deg, black 47%, rgba(6, 6, 7, 0) 76%), url("https://avada.website/fitness/wp-content/uploads/sites/130/2020/02/slider82x-scaled.jpg") no-repeat;
@@ -79,7 +80,7 @@ export default {
 }
 
 .bg-outline {
-  background-color: transparent !important;
+  background-color: transparent;
   border: 3.23px solid rgb(37, 37, 37) !important;
 }
 
@@ -87,5 +88,28 @@ export default {
   @include blue-button;
   font-weight: normal;
   font-size: medium;
+}
+
+.button_.bg-blue:hover {
+  background-color: $red;
+}
+
+.button_.bg-outline:hover {
+  background-color: white;
+  color: black;
+}
+
+.play-button {
+  position: absolute;
+  border-radius: 50%;
+  top: 40%;
+  right: 500px;
+  background-color: white;
+  color: $blue;
+  padding: 30px;
+}
+
+.play-button:hover {
+  color: $red;
 }
 </style>

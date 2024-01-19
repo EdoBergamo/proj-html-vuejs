@@ -75,6 +75,7 @@ export default {
     border-radius: 10px;
     border-bottom-right-radius: 40px;
     margin-top: -80px;
+    cursor: pointer;
 
     .layout {
       position: absolute;
