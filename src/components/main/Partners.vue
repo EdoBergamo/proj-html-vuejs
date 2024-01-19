@@ -87,6 +87,11 @@ export default {
       padding: 17px 60px;
     }
 
+    .button:hover{
+      background-color: #ff414b;
+      transition: background-color 0.5s;
+    }
+
     .paragraph {
       color: $grey;
       font-size: 23px;

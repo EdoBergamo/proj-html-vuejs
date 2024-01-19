@@ -12,7 +12,7 @@ export default {
                     title: "Team training",
                     subtitle: "Find a partner",
                     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    button: "Find a partner",
+                    button: "Find a partner >",
                 },
                 {
                     id: 2,
@@ -20,7 +20,7 @@ export default {
                     title: "Crossfit workout",
                     subtitle: "Push your limits",
                     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    button: "Learn about Crossfit",
+                    button: "Learn about Crossfit >",
                 },
                 {
                     id: 3,
@@ -28,7 +28,7 @@ export default {
                     title: "Weight loss plan",
                     subtitle: "Shed those pounds",
                     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    button: "Schedule a workout",
+                    button: "Schedule a workout >",
                 },
             ]),
         };
