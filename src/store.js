@@ -27,7 +27,7 @@ export const store = reactive({
       badge: false,
     },
     {
-      id: 1,
+      id: 4,
       label: "Videos",
       href: '/',
       active: false,
@@ -35,7 +35,7 @@ export const store = reactive({
       badge: false,
     },
     {
-      id: 1,
+      id: 5,
       label: "Blog",
       href: '/',
       active: false,
@@ -43,7 +43,7 @@ export const store = reactive({
       badge: false,
     },
     {
-      id: 1,
+      id: 6,
       label: "Store",
       href: '/',
       active: false,

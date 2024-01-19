@@ -1,10 +1,13 @@
 <script>
-import { store } from '../store.js';
+import AppPost from './AppPost.vue';
+
 export default {
     name: 'Footer',
+    components: {
+        AppPost,
+    },
     data() {
         return {
-            store,
             mobile: '1.800.000.0000',
             mail: 'info@your-company.com',
             recentPosts: [
@@ -37,6 +40,7 @@ export default {
 
 <template>
     <footer>
+        <!-- first section of footer -->
         <div class="container">
             <div class="row d-flex text-center padding_y">
                 <div class="col-4">
@@ -70,8 +74,8 @@ export default {
                 <div class="col-4">
                     <h4>RECENT POSTS</h4>
                     <div class="my-5 posts_">
-                        <a v-for="(post, index) in recentPosts" :key="index" :href="`${post.link}`" class="d-block my-2">
-                            {{ post.label }}</a>
+                        <AppPost v-for="(post, index) in recentPosts" :key="index" :href="`${post.link}`" :post="post">
+                        </AppPost>
                     </div>
                 </div>
                 <div class="col-4 ">
@@ -85,6 +89,7 @@ export default {
             </div>
         </div>
         <hr>
+        <!-- second section of footer whit copyright -->
         <div class="container">
             <div class="row text-center">
                 <div class="col ">
@@ -124,29 +129,13 @@ footer {
         i {
             margin: 10px;
             color: $red;
+            transition-property: color;
+            transition-duration: 0.5s;
 
             &:hover {
                 color: $grey;
             }
         }
-
-        .posts_ a {
-            text-decoration: none;
-            color: white;
-            font-size: larger;
-
-            &::before {
-                content: "\203A";
-                font-size: 28px;
-
-                margin-right: 10px;
-            }
-
-            &:hover {
-                color: $blue;
-            }
-        }
-
     }
 
     hr {
@@ -169,6 +158,8 @@ footer {
         .change {
             color: white;
             text-decoration: none;
+            transition-property: color;
+            transition-duration: 1s;
 
             &:hover {
                 color: $blue;
@@ -181,6 +172,7 @@ footer {
         display: inline-block;
         border-bottom: 1px dotted black;
 
+
     }
 
     .tooltip_ .tooltiptext_ {
@@ -192,6 +184,7 @@ footer {
         border-radius: 6px;
         padding: 1px 0;
         font-size: smaller;
+
 
         /* Position the tooltip */
         position: absolute;
