@@ -14,7 +14,7 @@ export default {
                             <h2>
                             “I’ve failed over and over again in my life. And that is why I succeed.”
                             </h2>
-                            <!-- <img src="/leila-waves-yellow.png" alt="wave" class="my-img"> -->
+                            <img src="/leila-waves-yellow.png" alt="wave" class="my-img">
                             <div class="text-grey my-5">
                             Arcu auctor gravida nisl, congue sit nisi tincidunt eget proin. In lacinia lacus donec sed massa in ipsum eros, tristique. Gravida suspendisse etiam in iaculis
                             </div>

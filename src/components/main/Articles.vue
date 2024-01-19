@@ -39,7 +39,7 @@ export default {
           <!-- IMMAGINE  -->
           <div class="position-relative">
             <img class="img-fluid" :src=card.img alt="protein" :class="card.videos ? 'my_img' : ''">
-            <i v-if="card.videos" class="fa-solid fa-play position-absolute" style="color: #4154FF;"></i>
+            <i v-if="card.videos" class="fa-solid fa-play position-absolute"></i>
           </div>
           <h4 class="my-3">{{ card.name }}</h4>
           <div>
@@ -87,6 +87,11 @@ export default {
         background-color: white;
         padding: 30px;
         z-index: 1;
+        color: $blue;
+      }
+
+      i:hover {
+        color: $red
       }
 
     }
