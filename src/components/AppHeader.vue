@@ -1,5 +1,5 @@
 <script>
-import AppLink from './AppLink.vue'
+import AppLink from './AppLink.vue';
 import { store } from '../store.js';
 
 export default {
@@ -49,7 +49,7 @@ export default {
           </a>
         </div>
 
-        <div class="w_auto d_flex align-items-center transition_" v-show="SearchActive == false">
+        <div class="w_auto d_flex align-items-center transition_" :class="SearchActive ? 'rotate' : ''" id="section1">
           <!-- links -->
           <ul class="d-flex m-0">
             <AppLink v-for="(link, index) in  store.header " :key="index" class="m-2" @click="ActiveLink(link.id)"
@@ -61,11 +61,12 @@ export default {
             <button class="button_ px-4 py-2 text-center mx-3">Schedule a workout</button>
           </span>
           <i class="fa-solid fa-magnifying-glass mx-3 icon_grey" @click="SearchOn"></i>
+
           <i class="fa-solid fa-cart-shopping mx-3 icon_grey"></i>
         </div>
 
         <!-- search bar activate -->
-        <div v-show="SearchActive" class="d_flex  align-items-center w-75">
+        <div class="d_flex  align-items-center w-75" id="section2">
           <div class="input-group w_auto m-0 w-100">
             <input type="text" class="p-3 search_style" placeholder="Search..." aria-label="Username"
               aria-describedby="basic-addon1">
@@ -74,6 +75,7 @@ export default {
             </span>
           </div>
           <i class="fa-solid fa-xmark icon_grey mx-4 fa-2xl" @click="SearchOn"></i>
+
         </div>
 
       </div>
@@ -84,6 +86,10 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as*;
 @use '../styles/partials/mixins' as*;
+
+html {
+  scroll-behavior: smooth;
+}
 
 header {
   background-color: $black;
@@ -137,9 +143,12 @@ header {
     }
   }
 
-  .transition {
-    transition: min-height calc(var(--awb-transition-time) * 1ms) cubic-bezier(.42, .01, .58, 1)
+  .rotate {
+    transform: traslateY(-1000px);
+    transition: transform 0.5s linear;
   }
+
+
 }
 </style>
 
