@@ -1,11 +1,9 @@
 <script>
-import healthEfitness from './healthEfitness.vue';
+
 
 export default {
   name: "Reviews",
-  components: {
-    healthEfitness,
-  },
+
 };
 </script>
 
@@ -65,7 +63,6 @@ export default {
       </div>
     </div>
   </div>
-  <healthEfitness />
 </template>
 
 <style lang="scss" scoped>
