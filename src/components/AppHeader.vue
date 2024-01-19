@@ -49,7 +49,7 @@ export default {
           </a>
         </div>
 
-        <div class="w_auto d_flex align-items-center transition_" :class="SearchActive ? 'rotate' : ''" id="section1">
+        <div class="w_auto d_flex align-items-center transition_" v-show="SearchActive == false" id="section1">
           <!-- links -->
           <ul class="d-flex m-0">
             <AppLink v-for="(link, index) in  store.header " :key="index" class="m-2" @click="ActiveLink(link.id)"
@@ -66,7 +66,7 @@ export default {
         </div>
 
         <!-- search bar activate -->
-        <div class="d_flex  align-items-center w-75" id="section2">
+        <div v-show="SearchActive" class="d_flex  align-items-center w-75" id="section2">
           <div class="input-group w_auto m-0 w-100">
             <input type="text" class="p-3 search_style" placeholder="Search..." aria-label="Username"
               aria-describedby="basic-addon1">
@@ -141,11 +141,6 @@ header {
     &:hover {
       background-color: $blue;
     }
-  }
-
-  .rotate {
-    transform: traslateY(-1000px);
-    transition: transform 0.5s linear;
   }
 
 
