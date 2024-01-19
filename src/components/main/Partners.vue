@@ -16,6 +16,7 @@ export default {
       <div class="row width-80 py-5">
         <p class="red size-28">Join our mailing list today</p>
         <p class="text-white size-58">Insider offers & flash sales in your inbox every week</p>
+        <img src="../../../public/leila-waves-yellow.png" alt="">
         <div class="row pt-5">
           <div class="col-8">
             <input type="email" name="email" id="email" value="" required="true"  placeholder="Insert your email ...*" class="form-control email">
@@ -89,6 +90,10 @@ export default {
     .paragraph {
       color: $grey;
       font-size: 23px;
+    }
+
+    img{
+      width: 100px;
     }
   }
 
