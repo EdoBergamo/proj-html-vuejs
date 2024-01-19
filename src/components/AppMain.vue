@@ -5,6 +5,8 @@ import Articles from "./main/Articles.vue";
 import Workout from "./main/Workout.vue";
 import WorkoutVDUE from "./main/WorkoutVDUE.vue";
 import BuyAvada from "./main/BuyAvada.vue";
+import healthEfitness from "./main/healthEfitness.vue";
+import Reviews from "./main/Reviews.vue";
 import { store } from "../store"
 
 export default {
@@ -19,7 +21,9 @@ export default {
     Articles,
     Workout,
     WorkoutVDUE,
-    BuyAvada
+    BuyAvada,
+    healthEfitness,
+    Reviews,
   },
   methods: {
     onEnter() {
@@ -42,7 +46,10 @@ export default {
 
 <template>
   <Jumbotron />
-
+  <Reviews />
+  <div class="box box_even">
+    <healthEfitness />
+  </div>
   <div class="box box_odd">
     <Articles :cards="store.videos" :title="store.title_videos" :view_all="store.view_all_videos" />
   </div>
@@ -52,13 +59,13 @@ export default {
   <div class="box box_odd">
     <Articles :cards="store.articles" :title="store.title_articles" :view_all="store.view_all_articles" />
   </div>
-  <div class="box box_odd">
+  <div class="box box_even">
     <BuyAvada />
   </div>
-  <div class="box box_even">
+  <div class="box box_odd">
     <Workout />
   </div>
-  <div class="box box_odd">
+  <div class="box box_even">
     <WorkoutVDUE />
   </div>
 </template>
