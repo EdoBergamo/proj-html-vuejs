@@ -1,6 +1,9 @@
 <script>
+import Reviews from './Reviews.vue';
+
 export default {
-  name: "Jumbotron",
+    name: "Jumbotron",
+    components: { Reviews }
 };
 </script>
 
@@ -40,6 +43,8 @@ export default {
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+
+  <Reviews />
 </template>
 
 <style lang="scss" scoped>
