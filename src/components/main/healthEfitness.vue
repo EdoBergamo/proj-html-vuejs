@@ -14,19 +14,18 @@ export default {
   <div class="bg">
     <div class="image">
       <img src="https://avada.website/fitness/wp-content/uploads/sites/130/2019/12/service15@2x.jpg" alt="">
-
     </div>
     <i class="elem fa-solid fa-play"></i>
     <div class="container">
-      <div class="row">
-        <div class="col-12">
+      <div class="row justify-content-end">
+        <div class="col-11 ">
           <div class="sin">
             <p class="textsm blue py-4">Tune up your workouts</p>
             <h1 class="textbig py-2">The best health and fitness advice online</h1>
             <p class="textsm grey py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur in
               aliasa
               ccusantium possimus labore explicabo </p>
-            <button class="button_ py-3 mx-4 bg-red  py-2 text-center">
+            <button class="button_ py-3 mx-4 bg-red  text-center">
               <i class="fa-brands fa-youtube mx-2"></i>
               Visit my YouTube channel
             </button>
@@ -46,7 +45,7 @@ export default {
 
 .bg {
   background-color: white;
-  height: 850px;
+  height: 750px;
 
   .elem {
     border-radius: 50%;
@@ -70,16 +69,20 @@ export default {
       width: 900px;
       height: 850px;
       border-bottom-right-radius: 10%;
-      position: absolute;
-      top: 1800px;
+      float: left;
+      margin-top: -100px;
     }
 
 
   }
 
   .sin {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 25px;
 
-    padding-left: 700px;
 
     .blue {
       color: $blue;
@@ -104,6 +107,7 @@ export default {
       @include blue-button;
       font-weight: normal;
       font-size: medium;
+      width: fit-content;
 
     }
 
