@@ -22,6 +22,7 @@ export default {
 
 <template>
   <Jumbotron />
+  <Articles :cards="store.videos" :title="store.title_videos" :view_all="store.view_all_videos" />
   <Partners />
   <Articles :cards="store.articles" :title="store.title_articles" :view_all="store.view_all_articles" />
   <Workout />

@@ -50,7 +50,10 @@ export default {
         <!-- CICLA CARD IN ARRAY PASSATO CON PROPS  -->
         <div class="col-4" v-for="card in cards">
           <!-- IMMAGINE  -->
-          <img class="img-fluid" :src=card.img alt="protein">
+          <div class="position-relative">
+            <img class="img-fluid" :src=card.img alt="protein" :class="card.videos ? 'my_img' : ''">
+            <i v-if="card.videos" class="fa-solid fa-play position-absolute" style="color: #4154FF;"></i>
+          </div>
           <h4 class="my-3">{{ card.name }}</h4>
           <div>
             {{ card.sub_title }}
@@ -61,7 +64,7 @@ export default {
     </div>
   </div>
 
-  <BuyAvada />
+  <BuyAvada v-if="!cards[0].videos" />
 </template>
 
 <style lang="scss" scoped>
@@ -83,6 +86,24 @@ export default {
   .col-4 {
     img {
       cursor: pointer;
+    }
+
+    .my_img {
+      border-bottom-right-radius: 40px;
+    }
+
+    .position-relative {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        border-radius: 50%;
+        background-color: white;
+        padding: 30px;
+        z-index: 1;
+      }
+
     }
 
     div {
