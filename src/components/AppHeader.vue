@@ -1,8 +1,12 @@
 <script>
+import AppLink from './AppLink.vue'
 import { store } from '../store.js';
 
 export default {
   name: 'Header',
+  components: {
+    AppLink,
+  },
   data() {
     return {
       store,
@@ -45,26 +49,11 @@ export default {
           </a>
         </div>
 
-        <div class="w_auto d_flex align-items-center" v-show="SearchActive == false">
+        <div class="w_auto d_flex align-items-center transition_" v-show="SearchActive == false">
           <!-- links -->
           <ul class="d-flex m-0">
-            <li v-for="(link, index) in  store.header " :key="index" class="m-2">
-
-              <div class="dropdown">
-                <a :class="link.active ? 'color_white' : ''" class="mx-1" @click="ActiveLink(link.id)">
-                  {{ link.label }}
-                  <span class="badge bg-warning mx-1 custom_badge" v-show="link.badge">New</span>
-                  <span v-show="link.dropdown.length > 0" class="mx-1">
-                    <i class="fa-solid fa-angle-down"></i>
-                  </span>
-                </a>
-
-                <div class="dropdown-content">
-                  <a href="#" v-for="drop in link.dropdown" @click="ActiveLink(link.id)">{{ drop }}</a>
-                </div>
-              </div>
-
-            </li>
+            <AppLink v-for="(link, index) in  store.header " :key="index" class="m-2" @click="ActiveLink(link.id)"
+              :link="link"></AppLink>
           </ul>
 
           <!-- button and searchbutton -->
@@ -102,59 +91,6 @@ header {
 
   ul {
     list-style-type: none;
-
-    a {
-      color: #7f7f7f;
-      text-decoration: none;
-      font-size: large;
-      transition-property: color;
-      transition-duration: 1s;
-
-
-      &:hover,
-      &:hover i {
-        color: #ddd
-      }
-    }
-
-    .color_white {
-      color: white
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-
-      .custom_badge {
-        color: $black;
-        border-radius: 0;
-      }
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: $black;
-      min-width: 130px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: rgb(255, 255, 255);
-      font-size: small;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: $blue;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
 
     i {
       color: $grey;
@@ -201,6 +137,9 @@ header {
     }
   }
 
+  .transition {
+    transition: min-height calc(var(--awb-transition-time) * 1ms) cubic-bezier(.42, .01, .58, 1)
+  }
 }
 </style>
 

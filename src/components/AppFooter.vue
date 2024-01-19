@@ -1,10 +1,13 @@
 <script>
-import { store } from '../store.js';
+import AppPost from './AppPost.vue';
+
 export default {
     name: 'Footer',
+    components: {
+        AppPost,
+    },
     data() {
         return {
-            store,
             mobile: '1.800.000.0000',
             mail: 'info@your-company.com',
             recentPosts: [
@@ -71,8 +74,8 @@ export default {
                 <div class="col-4">
                     <h4>RECENT POSTS</h4>
                     <div class="my-5 posts_">
-                        <a v-for="(post, index) in recentPosts" :key="index" :href="`${post.link}`" class="d-block my-2">
-                            {{ post.label }}</a>
+                        <AppPost v-for="(post, index) in recentPosts" :key="index" :href="`${post.link}`" :post="post">
+                        </AppPost>
                     </div>
                 </div>
                 <div class="col-4 ">
@@ -133,27 +136,6 @@ footer {
                 color: $grey;
             }
         }
-
-        .posts_ a {
-            text-decoration: none;
-            color: white;
-            font-size: larger;
-            transition-property: color;
-            transition-duration: 1s;
-
-            &::before {
-                content: "\203A";
-                font-size: 28px;
-                margin-right: 10px;
-                transition-property: color;
-                transition-duration: 1s;
-            }
-
-            &:hover {
-                color: $blue;
-            }
-        }
-
     }
 
     hr {
