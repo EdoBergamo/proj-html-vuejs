@@ -9,12 +9,30 @@ export default {
   },
   components: {
     BuyAvada,
+  },
+  data() {
+    return {
+      show: false
+    }
+  },
+  methods: {
+    onEnter() {
+      const box = document.getElementById("box");
+      const rect = box.getBoundingClientRect().top;
+      if (rect < 750) {
+        this.show = true
+      }
+    },
+  },
+
+  mounted() {
+    document.addEventListener("scroll", this.onEnter);
   }
 }
 </script>
 <template>
   <div class="my_50">
-    <div class="container">
+    <div class="container" id="box" :class="show ? 'show_box' : 'box_even'">
       <div class="row">
         <div class="col-6">
           <!-- TITOLO SEZIONE  -->

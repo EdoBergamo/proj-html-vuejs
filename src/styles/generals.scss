@@ -16,3 +16,16 @@ body {
 .w_auto {
   width: auto;
 }
+
+.box_even {
+  transform: translateX(-400%);
+}
+
+.box_odd {
+  transform: translateX(400%);
+}
+
+.show_box {
+  transform: translateX(0);
+  transition: transform 0.5s linear;
+}

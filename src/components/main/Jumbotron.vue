@@ -26,7 +26,7 @@ export default {
   display: flex;
   width: 100%;
   align-items: center;
-  background: linear-gradient(90deg, black 47%,rgba(6, 6, 7, 0) 76%), url('https://avada.website/fitness/wp-content/uploads/sites/130/2020/02/slider82x-scaled.jpg') no-repeat;
+  background: linear-gradient(90deg, black 47%, rgba(6, 6, 7, 0) 76%), url('https://avada.website/fitness/wp-content/uploads/sites/130/2020/02/slider82x-scaled.jpg') no-repeat;
   background-size: cover;
 }
 
