@@ -9,7 +9,7 @@ export default {
     <div class="container leila">
       <div class="row justify-content-center">
         <div class="col-4">
-          <div class="my_card" id="my_card-1">
+          <div class="my_card mx-1" id="my_card-1">
             <div class="layout">
               <img src="/big-wave-grossa-gls.png" alt="">
               <h2>Crossfit workout</h2>
@@ -18,7 +18,7 @@ export default {
           </div>
         </div>
         <div class="col-4">
-          <div class="my_card" id="my_card-2">
+          <div class="my_card mx-1" id="my_card-2">
             <div class="layout">
               <img src="/big-wave-grossa-gls.png" alt="">
               <h2>New gym apparel</h2>
@@ -27,7 +27,7 @@ export default {
           </div>
         </div>
         <div class="col-4">
-          <div class="my_card" id="my_card-3">
+          <div class="my_card mx-1" id="my_card-3">
             <div class="layout">
               <img src="/big-wave-grossa-gls.png" alt="">
               <h2>Team training</h2>
@@ -74,7 +74,7 @@ export default {
     min-height: 500px;
     border-radius: 10px;
     border-bottom-right-radius: 40px;
-    margin-top: -100px;
+    margin-top: -80px;
 
     .layout {
       position: absolute;
@@ -82,12 +82,14 @@ export default {
       height: 100%;
       top: 0;
       left: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.229) 10%, black 100%);
-      padding-left: 20px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgba(4, 4, 4, 0.457) 100%);
+      padding-left: 50px;
+      border-radius: 10px;
+      border-bottom-right-radius: 40px;
 
 
       img {
-        margin-top: 300px;
+        margin-top: 325px;
         filter: saturate(100%);
         width: 20%;
       }
@@ -103,6 +105,10 @@ export default {
         font-size: 25px;
       }
     }
+  }
+
+  .my_card:hover {
+    transform: scale(1.05);
   }
 
   #my_card-1 {

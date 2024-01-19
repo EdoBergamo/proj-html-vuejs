@@ -19,14 +19,17 @@ body {
 }
 
 .box_even {
-  transform: translateX(-400%);
+  opacity: 0;
+  transform: translateX(-30px);
 }
 
 .box_odd {
-  transform: translateX(400%);
+  opacity: 0;
+  transform: translateX(30px);
 }
 
 .show_box {
+  opacity: 1;
   transform: translateX(0);
-  transition: transform 0.5s linear;
+  transition: all 0.5s ease;
 }

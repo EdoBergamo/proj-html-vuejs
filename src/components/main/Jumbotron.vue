@@ -2,23 +2,19 @@
 import Reviews from './Reviews.vue';
 
 export default {
-    name: "Jumbotron",
-    components: { Reviews }
+  name: "Jumbotron",
+  components: { Reviews }
 };
 </script>
 
 <template>
   <div class="hero">
-    <div class="hero__content">
+    <div class="hero__content container">
       <p class="intro-text text-red">Certified fitness professional</p>
       <h1 class="big-text pb-5">Take control of your health</h1>
       <div>
         <img src="/leila-waves-yellow.png" alt="" />
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/47/47371.png"
-          class="d-none"
-          alt=""
-        />
+        <img src="https://cdn-icons-png.flaticon.com/512/47/47371.png" class="d-none" alt="" />
       </div>
       <p class="intro-text-2 pt-5">
         Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor
@@ -36,13 +32,9 @@ export default {
     </div>
   </div>
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <Reviews />
 </template>
