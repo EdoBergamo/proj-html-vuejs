@@ -5,9 +5,30 @@ export default {
   name: 'Header',
   data() {
     return {
-      store
+      store,
+      SearchActive: false,
     }
   },
+  methods: {
+    SearchOn() {
+      if (this.SearchActive) {
+        this.SearchActive = false;
+      }
+      else {
+        this.SearchActive = true;
+      }
+    },
+    ActiveLink(id) {
+      store.header.forEach(element => {
+        if (element.id == id) {
+          element.active = true;
+        }
+        else {
+          element.active = false;
+        }
+      });
+    }
+  }
 }
 </script>
 
@@ -24,13 +45,13 @@ export default {
           </a>
         </div>
 
-        <div class="w_auto d-flex align-items-center">
+        <div class="w_auto d_flex align-items-center" v-show="SearchActive == false">
           <!-- links -->
           <ul class="d-flex m-0">
             <li v-for="(link, index) in  store.header " :key="index" class="m-2">
 
               <div class="dropdown">
-                <a :href="`${link.href}`" :class="link.active ? 'color_white' : ''" class="mx-1">
+                <a :class="link.active ? 'color_white' : ''" class="mx-1" @click="ActiveLink(link.id)">
                   {{ link.label }}
                   <span class="badge bg-warning mx-1 custom_badge" v-show="link.badge">New</span>
                   <span v-show="link.dropdown.length > 0" class="mx-1">
@@ -39,21 +60,33 @@ export default {
                 </a>
 
                 <div class="dropdown-content">
-                  <a href="#" v-for="drop in link.dropdown">{{ drop }}</a>
+                  <a href="#" v-for="drop in link.dropdown" @click="ActiveLink(link.id)">{{ drop }}</a>
                 </div>
               </div>
 
             </li>
           </ul>
 
-          <!-- button and searchbar -->
+          <!-- button and searchbutton -->
           <span>
             <button class="button_ px-4 py-2 text-center mx-3">Schedule a workout</button>
           </span>
-          <i class="fa-solid fa-magnifying-glass mx-3 icon_grey"></i>
+          <i class="fa-solid fa-magnifying-glass mx-3 icon_grey" @click="SearchOn"></i>
           <i class="fa-solid fa-cart-shopping mx-3 icon_grey"></i>
-
         </div>
+
+        <!-- search bar activate -->
+        <div v-show="SearchActive" class="d_flex  align-items-center w-75">
+          <div class="input-group w_auto m-0 w-100">
+            <input type="text" class="p-3 search_style" placeholder="Search..." aria-label="Username"
+              aria-describedby="basic-addon1">
+            <span class="input-group-text button_search " id="basic-addon1">
+              <i class="fa-solid fa-magnifying-glass m-1 fa-lg"></i>
+            </span>
+          </div>
+          <i class="fa-solid fa-xmark icon_grey mx-4 fa-2xl" @click="SearchOn"></i>
+        </div>
+
       </div>
     </div>
   </header>
@@ -74,6 +107,9 @@ header {
       color: #7f7f7f;
       text-decoration: none;
       font-size: large;
+      transition-property: color;
+      transition-duration: 1s;
+
 
       &:hover,
       &:hover i {
@@ -130,6 +166,8 @@ header {
     font-weight: normal;
     font-size: medium;
     background-color: $blue;
+    transition-property: background-color;
+    transition-duration: 1s;
 
     &:hover {
       background-color: $red;
@@ -138,11 +176,31 @@ header {
 
   .icon_grey {
     color: $grey;
+    transition-property: color;
+    transition-duration: 1s;
 
     &:hover {
       color: rgb(255, 255, 255);
     }
   }
+
+  .search_style {
+    width: calc(100% - 60px);
+    height: 60px;
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  .button_search {
+    border-radius: 50px;
+    background-color: $black;
+    color: white;
+    border: none;
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+
 }
 </style>
 

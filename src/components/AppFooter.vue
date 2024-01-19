@@ -37,6 +37,7 @@ export default {
 
 <template>
     <footer>
+        <!-- first section of footer -->
         <div class="container">
             <div class="row d-flex text-center padding_y">
                 <div class="col-4">
@@ -85,6 +86,7 @@ export default {
             </div>
         </div>
         <hr>
+        <!-- second section of footer whit copyright -->
         <div class="container">
             <div class="row text-center">
                 <div class="col ">
@@ -124,6 +126,8 @@ footer {
         i {
             margin: 10px;
             color: $red;
+            transition-property: color;
+            transition-duration: 0.5s;
 
             &:hover {
                 color: $grey;
@@ -134,12 +138,15 @@ footer {
             text-decoration: none;
             color: white;
             font-size: larger;
+            transition-property: color;
+            transition-duration: 1s;
 
             &::before {
                 content: "\203A";
                 font-size: 28px;
-
                 margin-right: 10px;
+                transition-property: color;
+                transition-duration: 1s;
             }
 
             &:hover {
@@ -169,6 +176,8 @@ footer {
         .change {
             color: white;
             text-decoration: none;
+            transition-property: color;
+            transition-duration: 1s;
 
             &:hover {
                 color: $blue;
@@ -181,6 +190,7 @@ footer {
         display: inline-block;
         border-bottom: 1px dotted black;
 
+
     }
 
     .tooltip_ .tooltiptext_ {
@@ -192,6 +202,7 @@ footer {
         border-radius: 6px;
         padding: 1px 0;
         font-size: smaller;
+
 
         /* Position the tooltip */
         position: absolute;
