@@ -3,6 +3,7 @@ import Jumbotron from "./main/Jumbotron.vue";
 import Partners from "./main/Partners.vue";
 import Articles from "./main/Articles.vue";
 import Workout from "./main/Workout.vue";
+import WorkoutVDUE from "./main/WorkoutVDUE.vue";
 import BuyAvada from "./main/BuyAvada.vue";
 import { store } from "../store"
 
@@ -17,6 +18,7 @@ export default {
     Partners,
     Articles,
     Workout,
+    WorkoutVDUE,
     BuyAvada
   },
   methods: {
@@ -55,6 +57,9 @@ export default {
   </div>
   <div class="box box_even">
     <Workout />
+  </div>
+  <div class="box box_odd">
+    <WorkoutVDUE />
   </div>
 </template>
 
