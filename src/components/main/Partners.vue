@@ -108,7 +108,6 @@ export default {
 
 .bg-black{
   background-color: #000;
-  padding: 60px 80px;
-  
+  padding: 95px 110px;
 }
 </style>
