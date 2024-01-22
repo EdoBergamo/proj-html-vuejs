@@ -94,8 +94,8 @@ export default {
             <div class="row text-center">
                 <div class="col ">
                     <p class="grey margin_copyright">
-                        Copyright 2012-2024 | Avada Theme by <a href="/" class="change">ThemeFusion</a> | All Rights
-                        Reserved|Powered by <a href="/" class="change">WordPress</a>.
+                        Copyright 2012-2024 | Avada Theme by <a href="/" class="change">Boolean Team 1</a> | All Rights
+                        Reserved|Powered by <a href="/" class="change">Vite</a>.
                     </p>
                 </div>
             </div>
