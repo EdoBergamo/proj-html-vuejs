@@ -93,6 +93,7 @@ header {
   .container_header {
     width: 95vw;
     margin: 0 auto;
+    z-index: 1;
 
     .row_ {
       display: flex;
