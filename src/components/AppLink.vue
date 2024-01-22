@@ -25,11 +25,11 @@ export default {
                 <span v-show="link.dropdown.length > 0" class="mx-1">
                     <i class="fa-solid fa-angle-down"></i>
                 </span>
+                
+                <div class="dropdown-content">
+                    <a href="#" v-for="drop in link.dropdown" >{{ drop }}</a>
+                </div>
             </a>
-
-            <div class="dropdown-content">
-                <a href="#" v-for="drop in link.dropdown" >{{ drop }}</a>
-            </div>
         </div>
 
     </li>
